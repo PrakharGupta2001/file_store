@@ -22,17 +22,53 @@ A FastAPI-based file store service for uploading, managing, and analyzing text f
 ---
 
 ## Prerequisites
+-  **Python 3.8+** installed (for local testing).
 - **Docker** installed (for containerization).
 - **Kubernetes** environment (e.g., Minikube or Kind).
 - **kubectl** CLI installed.
 
 ---
 
-## Local Setup
+## Local Setup and Running the Application
 
 ### 1. Clone the Repository
 ```bash
-git clone <repository_url>
+git clone https://github.com/PrakharGupta2001/file_store.git
+cd file_store
+```
+
+### 2. Install Python Dependencies
+Create a virtual environment and install the required libraries:
+
+```bash
+python3 -m venv venv
+source venv/bin/activate
+pip install -r requirements.txt
+```
+
+### 3. Start the Application
+Run the FastAPI server locally:
+```bash
+uvicorn server.app:app --reload --host 127.0.0.1 --port 8000
+```
+
+### 4. Access the API
+Open your browser and visit the interactive Swagger documentation:
+```bash
+http://127.0.0.1:8000/docs
+```
+
+### 5. Test the Application
+Use the API endpoints via the Swagger UI.
+Or test with Thunder Client (in VS Code) or curl.
+
+---
+
+## Running the Application with Docker
+
+### 1. Clone the Repository
+```bash
+git clone https://github.com/PrakharGupta2001/file_store.git
 cd file_store
 ```
 
